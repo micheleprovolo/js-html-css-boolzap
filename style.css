@@ -1,3 +1,4 @@
+/* GENERAL RULES */
 * {
     margin: 0;
     padding: 0;
@@ -12,4 +13,22 @@ a {
 li {
     list-style-type: none;
 }
+.flex {
+    display: flex;
+}
+/* END GENERAL RULES */
 
+main {
+    /* width: 1400px;
+    height: 100vh; */
+}
+
+aside {
+    width: 40%;
+    background-color: aqua;
+}
+
+section {
+    width: 60%;
+    background-color: brown;
+}
