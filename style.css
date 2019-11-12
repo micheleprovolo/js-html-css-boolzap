@@ -22,23 +22,30 @@ li {
 
 .global {
     width: 100vw;
-
 }
 
 main {
-    width: 90%;
-    /* height: 100vh; */
+    width: 80%;
     margin: 0 auto;
-    /* height: 100vh; */
 }
 
 aside {
     width: 40%;
-    /* background-color: white; */
 }
 
 .profile {
     background-color: rgba(0,0,0,.2);
+}
+
+.notification {
+    background-color: deepskyblue;
+    padding: 3%;
+    justify-content: flex-start;
+}
+
+.text-notification {
+    line-height: 23px;
+    margin-left: 10%;
 }
 
 .user-list {
@@ -52,7 +59,6 @@ aside {
 
 section {
     width: 60%;
-    /* background-color: brown; */
 }
 
 .chat {
@@ -61,15 +67,30 @@ section {
     overflow: auto;
     height: calc(100vh - 150px);
 }
+.send-message{
+    background-color: rgba(0,0,0,.2);
+}
 
 .msgsent {
     background-color: chartreuse;
-    padding: 5px;
-    margin-top: 10px;
+    padding: 10px 10px;
+    margin-top: 20px;
+    margin-left: 75%;
     border-radius: 8px;
-    width: 15%;
+    max-width: 20%;
     word-wrap: break-word;
   }
+
+.bot-answer {
+    background-color:white;
+    padding: 10px 10px;
+    margin-top: 20px;
+    margin-left: 8%;
+    margin-right: 30%;
+    border-radius: 8px;
+    /* max-width: 20%; */
+    /* word-wrap: break-word; */
+}
 
 #template {
     display: none;

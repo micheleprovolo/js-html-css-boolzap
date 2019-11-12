@@ -17,7 +17,7 @@ $( document ).ready(function() {
     elmentmsg.find(".testo").text(messaggio);
     
     // appendiamo una copia con testo valorizzato del div "msgsent"
-    $(".green-msg").append(elmentmsg);
+    $(".chat").append(elmentmsg);
 
     // ripuliamo il contenuto dell'input, per UX
     $(".message").val("");
