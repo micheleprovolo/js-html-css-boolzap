@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    font-size: x-small;
+    font-size: 15px;
 }
 
 a {
@@ -14,18 +14,22 @@ a {
 li {
     list-style-type: none;
 }
+
 .flex {
     display: flex;
-    /* justify-content: space-between; */
+    
 }
+
 /* END GENERAL RULES */
 
-.global {
+/* .global {
     width: 100vw;
-}
+    height: 100vh;
+} */
 
 main {
-    width: 80%;
+    width: 85%;
+ 
     margin: 0 auto;
 }
 
@@ -34,18 +38,33 @@ aside {
 }
 
 .profile {
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0, 0, 0, .2);
+    justify-content: space-between;
+    border-bottom: rgb(165, 169, 172) 0.5px solid;
 }
 
 .notification {
     background-color: deepskyblue;
     padding: 3%;
     justify-content: flex-start;
+    border-bottom: rgb(165, 169, 172) 0.5px solid;
 }
 
-.text-notification {
+.text-space {
     line-height: 23px;
-    margin-left: 10%;
+    margin-left: 5%;
+}
+
+.text-space1 {
+    margin-left: 5%;
+}
+
+.search {
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 3%;
+    color: grey;
+    width: 80%;
 }
 
 .user-list {
@@ -54,7 +73,19 @@ aside {
 }
 
 .user-info {
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0, 0, 0, .2);
+    justify-content: space-between;
+    height: 80px;
+}
+
+.extra {
+    width: 100%;
+    
+}
+
+.format {
+    padding: 3%;
+    border-bottom: rgb(165, 169, 172) 0.5px solid;
 }
 
 section {
@@ -63,12 +94,14 @@ section {
 
 .chat {
     background-image: url("img/sfondo chat.png");
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0, 0, 0, .2);
     overflow: auto;
     height: calc(100vh - 150px);
 }
-.send-message{
-    background-color: rgba(0,0,0,.2);
+
+.send-message {
+    background-color: rgba(0, 0, 0, .2);
+    justify-content: space-between;
 }
 
 .msgsent {
@@ -79,10 +112,11 @@ section {
     border-radius: 8px;
     max-width: 20%;
     word-wrap: break-word;
-  }
+    display: inline-block;
+}
 
 .bot-answer {
-    background-color:white;
+    background-color: white;
     padding: 10px 10px;
     margin-top: 20px;
     margin-left: 8%;
@@ -90,8 +124,15 @@ section {
     border-radius: 8px;
     /* max-width: 20%; */
     word-wrap: break-word;
+    display: inline-block;
+}
+
+.message {
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 80%;
 }
 
 #template {
     display: none;
-  }
+}
