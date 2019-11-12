@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    font-size: x-small;
 }
 
 a {
@@ -20,10 +21,12 @@ li {
 
 .global {
     width: 100vw;
+
 }
 
 main {
     width: 90%;
+    /* height: 100vh; */
     margin: 0 auto;
     /* height: 100vh; */
 }
@@ -37,6 +40,11 @@ aside {
     background-color: rgba(0,0,0,.2);
 }
 
+.user-list {
+    overflow: auto;
+    height: calc(100vh - 150px);
+}
+
 .user-info {
     background-color: rgba(0,0,0,.2);
 }
@@ -45,3 +53,11 @@ section {
     width: 60%;
     /* background-color: brown; */
 }
+
+.chat {
+    background-image: url("img/sfondo chat.png");
+    background-color: lightgrey;
+    overflow: auto;
+    height: calc(100vh - 150px);
+}
+
