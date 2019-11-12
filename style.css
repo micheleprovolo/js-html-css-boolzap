@@ -16,6 +16,7 @@ li {
 }
 .flex {
     display: flex;
+    /* justify-content: space-between; */
 }
 /* END GENERAL RULES */
 
@@ -56,8 +57,20 @@ section {
 
 .chat {
     background-image: url("img/sfondo chat.png");
-    background-color: lightgrey;
+    background-color: rgba(0,0,0,.2);
     overflow: auto;
     height: calc(100vh - 150px);
 }
 
+.msgsent {
+    background-color: chartreuse;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 8px;
+    width: 15%;
+    word-wrap: break-word;
+  }
+
+#template {
+    display: none;
+  }
