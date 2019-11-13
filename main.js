@@ -22,9 +22,13 @@ $( document ).ready(function() {
 
     // appendiamo una copia con testo valorizzato del div "msgsent"
     $(".chat").append(elmentmsg);
+    
+    setTimeout(oneSecond, 1000);
 
-    $(".chat").append(autoAnswer);
-    // ripuliamo il contenuto dell'input, per UX
+    function oneSecond() {
+        $(".chat").append(autoAnswer);
+    }
+            // ripuliamo il contenuto dell'input, per UX
     $(".message").val("");
 
 
