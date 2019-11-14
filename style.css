@@ -100,7 +100,7 @@ section {
 }
 
 .right-section div.active {
-    display: inline-block;
+    display: block;
 }
 
 .send-message {

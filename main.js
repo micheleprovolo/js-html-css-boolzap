@@ -19,13 +19,13 @@ $(document).ready(function () {
         autoAnswer.find(".testo-automatico").text("Hello");
 
         //appendiamo una copia con testo valorizzato del div "msgsent"
-        $(".chat").append(elmentmsg);
+        $(".chat.active").append(elmentmsg);
 
         //appendiamo una copia con testo valorizzato del div "autoAnswer" tramite funzione di setTimeout
         setTimeout(oneSecond, 1000);
 
         function oneSecond() {
-            $(".chat").append(autoAnswer);
+            $(".chat.active").append(autoAnswer);
         }
 
         // ripuliamo il contenuto dell'input, per UX
@@ -69,7 +69,6 @@ $(document).ready(function () {
     $(this).addClass("active");
     
     //seleziono la chat e le attribuisco la classe active
-
     $(".right-section div[data-ref=" + clickedBlock +"]").addClass("active");
 
     });
