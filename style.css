@@ -96,6 +96,11 @@ section {
     background-color: rgba(0, 0, 0, .2);
     overflow: auto;
     height: calc(100vh - 200px);
+    display: none;
+}
+
+.right-section div.active {
+    display: inline-block;
 }
 
 .send-message {
@@ -147,3 +152,8 @@ section {
 .show {
     color: red;
 } 
+
+.user-list .active {
+    background-color: cornflowerblue;
+}
+

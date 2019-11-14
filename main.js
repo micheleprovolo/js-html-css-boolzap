@@ -31,7 +31,6 @@ $(document).ready(function () {
         // ripuliamo il contenuto dell'input, per UX
         $(".message").val("");
 
-
     });
 
 
@@ -53,24 +52,30 @@ $(document).ready(function () {
 
 
     });
+    //al click sul blocco contatto
+    $(".block").click(function () {
+
+    //attribuisco al blocco cliccato l'attributo data-ref e lo salvo in una variabile
+    var clickedBlock = $(this).attr("data-ref");
+        console.log(clickedBlock);
+        
+    //seleziono il blocco che ha già la classe active di default e gliela tolgo
+    $(".user-list div.active").removeClass("active");
+
+    //seleziono la chat che ha già la classe active di default e gliela tolgo
+    $(".right-section div.active").removeClass("active");
+    
+    //attribuisco la classe active al blocco che ho cliccato
+    $(this).addClass("active");
+    
+    //seleziono la chat e le attribuisco la classe active
+
+    $(".right-section div[data-ref=" + clickedBlock +"]").addClass("active");
+
+    });
 
 });
+//click sul contatto (come i pallini del carousel): usa data attribute -- a questo blocco qui corrispodnde questa chat qui e
+//per spostare l'header posso recuperare le info del blocco che ho cliccato e mettere nell'header della chat
 
-
-//sulla stessa funzione di callback (uso sempre il clone per l'elemento bianco di sx)
-//appendere messaggio bianco sul messaggio verde nella stessa funzione di prima (usa setTimeout)
-
-
-
-// l'evento non sarà click, ma quando io premo qualcosa a tastiera in più mentre scrivo devo filtrare ogni singolo carattere
-// devo legare l'evento all'input della ricerca con il metodo della tastiera
-
-// check solo sul nome contatto
-// sull'evento di tastiera, devo confrontare l'input con ogni singolo blocco nome utente (se dà true inserisco in pagina i nomi matchati, altrimenti niente)
-
-// eventi di tastiera
-//come legare eventi tastiera al blocco
-//come ciclare gli oggetti (ciclo di ogni singolo contatto) di jquery (each) per fare check (rivedi ex passati)
-//per ogni blocco ocntatto fare check se il valore dell'utente come stringa è compreso nelle stringhe che ho già (usa includes in versione stringhe)
-
-//ondeviceorientationabsoluteper ogni dei blocchi contatti fare un check 
+//cancella mex: (ex live della to do list) uso poi la tecnica di bubbling
