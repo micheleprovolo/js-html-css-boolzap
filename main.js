@@ -1,39 +1,58 @@
-$( document ).ready(function() {
+$(document).ready(function () {
 
     //agganciamo al click sul bottone la funzione di callback
-    $(".sendmsg").click(function(){
+    $(".sendmsg").click(function () {
 
-    //ci salviamo il valore dell'input inserito dall'utente
-    var messaggio = $(".message").val();
-    // console.log(messaggio);
-    
-    // cloniamo il div con classe "msgsent" che sta dentro un div con ID "template"
-    var elmentmsg = $("#template .msgsent").clone();
-    console.log(elmentmsg);
+        //ci salviamo il valore dell'input inserito dall'utente
+        var messaggio = $(".message").val();
+        // console.log(messaggio);
 
-    var autoAnswer = $("#template .bot").clone();
+        // cloniamo il div con classe "msgsent" e "autoAnswer" che sta dentro un div con ID "template"
+        var elmentmsg = $("#template .msgsent").clone();
+        // console.log(elmentmsg);
 
-    // trova qualcosa che ha classe testo e scrivici dentro il messaggio
-    //modifica questa copia di "msgsent" aggiungendogli il testo del messaggio
-    elmentmsg.find(".testo").text(messaggio);
-    
-    autoAnswer.find(".testo-automatico").text("Hello");
-    // $(".chat").find("p").text("Hello world!")
+        var autoAnswer = $("#template .bot").clone();
 
-    // appendiamo una copia con testo valorizzato del div "msgsent"
-    $(".chat").append(elmentmsg);
-    
-    setTimeout(oneSecond, 1000);
+        //modifica questa copia di "msgsent" trovando qualcosa che ha classe testo e scrivici dentro il messaggio
+        elmentmsg.find(".testo").text(messaggio);
+        //modifica questa copia di "msgsent" trovando qualcosa che ha classe testo-automatico e scrivici dentro una stringa di testo
+        autoAnswer.find(".testo-automatico").text("Hello");
 
-    function oneSecond() {
-        $(".chat").append(autoAnswer);
-    }
-            // ripuliamo il contenuto dell'input, per UX
-    $(".message").val("");
+        //appendiamo una copia con testo valorizzato del div "msgsent"
+        $(".chat").append(elmentmsg);
+
+        //appendiamo una copia con testo valorizzato del div "autoAnswer" tramite funzione di setTimeout
+        setTimeout(oneSecond, 1000);
+
+        function oneSecond() {
+            $(".chat").append(autoAnswer);
+        }
+
+        // ripuliamo il contenuto dell'input, per UX
+        $(".message").val("");
 
 
     });
 
+
+    $(".search").keyup(function () {
+
+        var key = $(this).val().toLowerCase();
+
+        $(".user-list .username").each(function (i, item) {
+            // leggo testo dentro elemento con html
+            var userName = $(item).html().toLowerCase();
+
+            //ricordati che  includes torna sempre true se key ==""
+            if (!userName.includes(key)) {
+                $(item).parent().parent().hide();
+            } else {
+                $(item).parent().parent().show();
+            }
+        });
+
+
+    });
 
 });
 

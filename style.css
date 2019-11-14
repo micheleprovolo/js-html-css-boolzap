@@ -139,3 +139,11 @@ section {
 #template {
     display: none;
 }
+
+ .hide {
+    color: grey;
+} 
+
+.show {
+    color: red;
+} 
