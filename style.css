@@ -121,6 +121,7 @@ section {
     word-wrap: break-word;
     display: inline-block;
     position: relative;
+    cursor: pointer;
 }
 
 .bot {
@@ -173,3 +174,4 @@ section {
     right: 0;
     display: none;
 }
+

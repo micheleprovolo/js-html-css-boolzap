@@ -68,13 +68,18 @@ $(document).ready(function () {
     
 
     //attribuisco la classe active al blocco che ho cliccato
-    $(this).addClass("active");
-    $(".user-info p").text("Hello world!");
+     $(this).addClass("active");
+    // $(".user-info p").text("Hello world!");
     
     //seleziono la chat e le attribuisco la classe active
     $(".right-section div[data-ref='" + clickedBlock +"']").addClass("active");
+    
+    var name = $(this).find(".username").text();
+    $(".user-info p").text(name);
 
     });
+
+
 
     $(document).on( "click", ".container", function() {
         $(this).find(".dropdown").toggle();
