@@ -52,6 +52,7 @@ $(document).ready(function () {
 
 
     });
+
     //al click sul blocco contatto
     $(".block").click(function () {
 
@@ -65,12 +66,22 @@ $(document).ready(function () {
     //seleziono la chat che ha già la classe active di default e gliela tolgo
     $(".right-section div.active").removeClass("active");
     
+
     //attribuisco la classe active al blocco che ho cliccato
     $(this).addClass("active");
+    $(".user-info p").text("Hello world!");
     
     //seleziono la chat e le attribuisco la classe active
-    $(".right-section div[data-ref=" + clickedBlock +"]").addClass("active");
+    $(".right-section div[data-ref='" + clickedBlock +"']").addClass("active");
 
+    });
+
+    $(document).on( "click", ".container", function() {
+        $(this).find(".dropdown").toggle();
+        $(this).find(".dropdown span").click( function () {
+            // $(this).parents(".msgsent").removeClass("bot");
+            $(this).parents(".msgsent").addClass("nascondi");
+        });
     });
 
 });

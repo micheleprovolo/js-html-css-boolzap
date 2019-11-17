@@ -79,7 +79,6 @@ aside {
 
 .extra {
     width: 100%;
-    
 }
 
 .format {
@@ -103,6 +102,10 @@ section {
     display: block;
 }
 
+.extra div.active {
+    display: block;
+}
+
 .send-message {
     background-color: rgba(0, 0, 0, .2);
     justify-content: space-between;
@@ -117,6 +120,7 @@ section {
     max-width: 20%;
     word-wrap: break-word;
     display: inline-block;
+    position: relative;
 }
 
 .bot {
@@ -145,7 +149,7 @@ section {
     display: none;
 }
 
- .hide {
+.hide {
     color: grey;
 } 
 
@@ -157,3 +161,15 @@ section {
     background-color: cornflowerblue;
 }
 
+.nascondi {
+    display: none;
+}
+
+.dropdown {
+    position: absolute;
+    background: white;
+    padding: 5px;
+    top: -50%;
+    right: 0;
+    display: none;
+}
