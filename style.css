@@ -17,29 +17,29 @@ li {
 
 .flex {
     display: flex;
-    
 }
 
 /* END GENERAL RULES */
 
-/* .global {
-    width: 100vw;
-    height: 100vh;
-} */
 
 main {
-    width: 85%;
-    margin: 0 auto;
+    /* width: 90%; */
+    height: 90vh;
+    width: 90vw;
+    margin: 10px auto;
+    border: 1px solid black;
 }
 
 aside {
     width: 40%;
+    height: 100%;
 }
 
 .profile {
-    background-color: rgba(0, 0, 0, .2);
+    background-color:  #EDEDED;
     justify-content: space-between;
     border-bottom: rgb(165, 169, 172) 0.5px solid;
+    height: 13%;
 }
 
 .notification {
@@ -47,6 +47,7 @@ aside {
     padding: 3%;
     justify-content: flex-start;
     border-bottom: rgb(165, 169, 172) 0.5px solid;
+    height: 13%;
 }
 
 .text-space {
@@ -58,27 +59,37 @@ aside {
     margin-left: 5%;
 }
 
+.search-bar {
+    height: 8%;
+    background-color: grey;
+}
+
 .search {
     border: 1px solid gray;
     border-radius: 5px;
-    margin: 3%;
+    margin: 2%;
+    padding: 1%;
     color: grey;
     width: 80%;
 }
 
 .user-list {
     overflow: auto;
-    height: calc(100vh - 250px);
-}
-
-.user-info {
-    background-color: rgba(0, 0, 0, .2);
-    justify-content: space-between;
-    height: 80px;
+    height: 66%;
+    background-color: honeydew;
 }
 
 .extra {
     width: 100%;
+}
+
+.extra p {
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+.extra svg {
+    padding-bottom: 5px;
 }
 
 .format {
@@ -88,13 +99,20 @@ aside {
 
 section {
     width: 60%;
+    height: 100%;
+}
+
+.user-info {
+    background-color: #EDEDED;
+    justify-content: space-between;
+    height: 13%;
 }
 
 .chat {
     background-image: url("img/sfondo chat.png");
-    background-color: rgba(0, 0, 0, .2);
+    background-color: #EDEDED;
     overflow: auto;
-    height: calc(100vh - 200px);
+    height: 74%;
     display: none;
 }
 
@@ -107,8 +125,9 @@ section {
 }
 
 .send-message {
-    background-color: rgba(0, 0, 0, .2);
+    background-color: #EDEDED;
     justify-content: space-between;
+    height: 13%;
 }
 
 .msgsent {
@@ -131,7 +150,6 @@ section {
     margin-left: 8%;
     margin-right: 30%;
     border-radius: 8px;
-    /* max-width: 20%; */
     word-wrap: break-word;
     display: inline-block;
 }
@@ -140,6 +158,7 @@ section {
     border: 1px solid gray;
     border-radius: 5px;
     width: 80%;
+    padding-left: 1%;
 }
 
 ::placeholder {
@@ -159,7 +178,7 @@ section {
 } 
 
 .user-list .active {
-    background-color: cornflowerblue;
+    background-color:lightgray;
 }
 
 .nascondi {
